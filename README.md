@@ -22,6 +22,8 @@ tags:
   - sanctions
   - professional-responsibility
   - generative-ai
+  - ai-regulation
+  - ai-governance
   - safelegalai
 configs:
   - config_name: incidents
@@ -77,9 +79,25 @@ from datasets import load_dataset
 ds = load_dataset("safelegalaidata/legal-ai-incidents")
 ```
 
+## Uses
+
+**Suited to:** counting and comparing what the record shows (by court, jurisdiction, date, actor, outcome, status); building watch-lists and alerts from the `url` and last-checked fields; grounding retrieval or summarisation on cited primary documents; teaching and library guides that need a dated, sourced list.
+
+**Not suited to:** ranking products, people or courts; inferring prevalence beyond what a court or regulator has itself stated; any use that treats a coding column as a finding of fact or law. Where a row names a person or organisation it does so as they appear in a public document; anyone named may request a correction or right of reply at https://safelegalai.com/report.
+
 ## Cite
 
 > SafeLegalAI (published by Cognesio LLP), "Legal AI Incident Tracker", safelegalai.com, accessed 2026-09-08. https://safelegalai.com/tracker — data: CC BY 4.0.
+
+```bibtex
+@dataset{safelegalai_legal_ai_incidents_2026_09_08,
+  title        = {Legal AI Incident Tracker},
+  author       = {{SafeLegalAI (Cognesio LLP)}},
+  year         = {2026},
+  url          = {https://safelegalai.com/tracker},
+  note         = {Mirror: https://huggingface.co/datasets/safelegalaidata/legal-ai-incidents. Data CC BY 4.0. Last checked 2026-09-05.}
+}
+```
 
 Cite the primary source as the authority and this dataset as the structured record that surfaced it. Corrections and right of reply: [safelegalai.com/report](https://safelegalai.com/report).
 
