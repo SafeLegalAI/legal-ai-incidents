@@ -37,7 +37,7 @@ configs:
 
 **What went wrong when AI met the courtroom, and what did courts and regulators do about it?**
 
-150 incidents · 15 jurisdictions · 48 with a recorded regulatory outcome · last checked 2026-09-05 · synced from [safelegalai.com](https://safelegalai.com) on 2026-09-08.
+161 incidents · 15 jurisdictions · 50 with a recorded regulatory outcome · last checked 2026-09-22 · synced from [safelegalai.com](https://safelegalai.com) on 2026-10-05.
 
 Every court case where AI misuse reached a judgment or order: the court, the date, what was fabricated or misused, the outcome, any penalty, who the actor was, and — the layer no other tracker keeps — what the professional regulator did next. Every record links its primary source (judgment, order or regulator notice).
 
@@ -47,7 +47,7 @@ This is a mirror. The canonical, always-current version lives at **[safelegalai.
 
 | config | rows | what a row is | files |
 |---|---|---|---|
-| `incidents` | 150 | one row per court decision where AI misuse was found | [`data/incidents.jsonl`](data/incidents.jsonl) · [`csv/incidents.csv`](csv/incidents.csv) |
+| `incidents` | 161 | one row per court decision where AI misuse was found | [`data/incidents.jsonl`](data/incidents.jsonl) · [`csv/incidents.csv`](csv/incidents.csv) |
 
 ## Fields
 
@@ -57,7 +57,7 @@ This is a mirror. The canonical, always-current version lives at **[safelegalai.
 | `caseName` · `court` · `date` · `jurisdiction` | the decision; `jurisdiction` is the tracker bucket (uk, us-federal, us-state, eu, india…) |
 | `aiTool` | only when the record names it; otherwise absent — never guessed |
 | `conduct` | what was hallucinated, fabricated or misused |
-| `outcome` · `monetaryPenalty` · `penaltyCurrency` | sanctions · fine · costs-order · referral · warning · strike-off · suspension · dismissal · pending · other |
+| `outcome` · `monetaryPenalty` · `penaltyCurrency` | the most severe consequence imposed in the document: strike-off · suspension · referral · fine · costs-order · sanctions · dismissal · filing-struck · warning · pending · none (noted, no consequence) · other |
 | `actor` | lawyer · litigant-in-person · prosecutor · judge · expert · firm · other |
 | `regulatoryOutcome` | `{body, disposition, date}` — what the SRA, BSB, state bar, law society… did after the court |
 | `sources` | `[{label, url}]`, primary source first |
@@ -87,15 +87,15 @@ ds = load_dataset("safelegalaidata/legal-ai-incidents")
 
 ## Cite
 
-> SafeLegalAI (published by Cognesio LLP), "Legal AI Incident Tracker", safelegalai.com, accessed 2026-09-08. https://safelegalai.com/tracker — data: CC BY 4.0.
+> SafeLegalAI (published by SafeLegalAI), "Legal AI Incident Tracker", safelegalai.com, accessed 2026-10-05. https://safelegalai.com/tracker — data: CC BY 4.0.
 
 ```bibtex
-@dataset{safelegalai_legal_ai_incidents_2026_09_08,
+@dataset{safelegalai_legal_ai_incidents_2026_10_05,
   title        = {Legal AI Incident Tracker},
-  author       = {{SafeLegalAI (Cognesio LLP)}},
+  author       = {{SafeLegalAI (SafeLegalAI)}},
   year         = {2026},
   url          = {https://safelegalai.com/tracker},
-  note         = {Mirror: https://huggingface.co/datasets/safelegalaidata/legal-ai-incidents. Data CC BY 4.0. Last checked 2026-09-05.}
+  note         = {Mirror: https://huggingface.co/datasets/safelegalaidata/legal-ai-incidents. Data CC BY 4.0. Last checked 2026-09-22.}
 }
 ```
 
@@ -103,11 +103,11 @@ Cite the primary source as the authority and this dataset as the structured reco
 
 ## Licence
 
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Attribution: **SafeLegalAI (safelegalai.com), published by Cognesio LLP** with a link to https://safelegalai.com/tracker. Primary sources keep their own licences and copyright.
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Attribution: **SafeLegalAI (safelegalai.com), published by SafeLegalAI** with a link to https://safelegalai.com/tracker. Primary sources keep their own licences and copyright.
 
 ## Disclaimer and notices
 
-**Provided "as is", without warranty of any kind** — the CC BY 4.0 licence excludes all warranties and limits liability (section 5), and those exclusions apply to this dataset. **Not legal advice**; no lawyer–client relationship arises from using it. Cognesio LLP is not a law firm. SafeLegalAI records findings made by courts, regulators and vendors' own published pages; it makes no findings of its own, and the linked official documents are the record. Editorial classifications (status labels, requirement codes, "documented yes/no/not disclosed") are opinions about documents, expressed in good faith; the document prevails. Where a row names a person or organisation, it does so as they appear in a public court document, official publication or their own published material — a fair and accurate report published in good faith and in the public interest; anyone named may reply or request a correction at https://safelegalai.com/report. Product, company, court and regulator names and marks belong to their owners and identify the product or body referred to; no affiliation or endorsement is implied. Full terms and notice-and-takedown: https://safelegalai.com/disclaimer.
+**Provided "as is", without warranty of any kind** — the CC BY 4.0 licence excludes all warranties and limits liability (section 5), and those exclusions apply to this dataset. **Not legal advice**; no lawyer–client relationship arises from using it. SafeLegalAI is not a law firm. SafeLegalAI records findings made by courts, regulators and vendors' own published pages; it makes no findings of its own, and the linked official documents are the record. Editorial classifications (status labels, requirement codes, "documented yes/no/not disclosed") are opinions about documents, expressed in good faith; the document prevails. Where a row names a person or organisation, it does so as they appear in a public court document, official publication or their own published material — a fair and accurate report published in good faith and in the public interest; anyone named may reply or request a correction at https://safelegalai.com/report. Product, company, court and regulator names and marks belong to their owners and identify the product or body referred to; no affiliation or endorsement is implied. Full terms and notice-and-takedown: https://safelegalai.com/disclaimer.
 
 ## Related datasets
 
@@ -124,15 +124,15 @@ Cite the primary source as the authority and this dataset as the structured reco
   "canonical": "https://safelegalai.com/tracker",
   "source": "https://safelegalai.com/tracker/incidents.json",
   "catalogue": "https://safelegalai.com/datasets",
-  "publisher": "Cognesio LLP",
+  "publisher": "SafeLegalAI",
   "license": "CC BY 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "lastChecked": "2026-09-05",
-  "synced": "2026-09-08",
+  "lastChecked": "2026-09-22",
+  "synced": "2026-10-05",
   "notice": "Provided as is, without warranty; not legal advice. SafeLegalAI records findings made by courts, regulators and vendors' own pages; the linked official documents are the record. Names and marks belong to their owners. Terms: https://safelegalai.com/disclaimer",
   "tables": {
-    "incidents": 150
+    "incidents": 161
   },
-  "contentSha256": "eec665689df3378ae6926e569a9cb851d3be763820450459160c5fe859919b3c"
+  "contentSha256": "0faf49eafdc79fbc1bd979df21561871f9087c3f070763d95e16c94e284d1011"
 }
 ```

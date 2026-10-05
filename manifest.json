@@ -3,14 +3,14 @@
   "canonical": "https://safelegalai.com/tracker",
   "source": "https://safelegalai.com/tracker/incidents.json",
   "catalogue": "https://safelegalai.com/datasets",
-  "publisher": "Cognesio LLP",
+  "publisher": "SafeLegalAI",
   "license": "CC BY 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "lastChecked": "2026-09-05",
-  "synced": "2026-09-08",
+  "lastChecked": "2026-09-22",
+  "synced": "2026-10-05",
   "notice": "Provided as is, without warranty; not legal advice. SafeLegalAI records findings made by courts, regulators and vendors' own pages; the linked official documents are the record. Names and marks belong to their owners. Terms: https://safelegalai.com/disclaimer",
   "tables": {
-    "incidents": 150
+    "incidents": 161
   },
-  "contentSha256": "eec665689df3378ae6926e569a9cb851d3be763820450459160c5fe859919b3c"
+  "contentSha256": "0faf49eafdc79fbc1bd979df21561871f9087c3f070763d95e16c94e284d1011"
 }
