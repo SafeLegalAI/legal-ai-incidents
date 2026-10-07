@@ -37,7 +37,7 @@ configs:
 
 **What went wrong when AI met the courtroom, and what did courts and regulators do about it?**
 
-170 incidents · 15 jurisdictions · 51 with a recorded regulatory outcome · last checked 2026-10-05 · synced from [safelegalai.com](https://safelegalai.com) on 2026-10-05.
+173 incidents · 15 jurisdictions · 51 with a recorded regulatory outcome · last checked 2026-10-07 · synced from [safelegalai.com](https://safelegalai.com) on 2026-10-07.
 
 Every court case where AI misuse reached a judgment or order: the court, the date, what was fabricated or misused, the outcome, any penalty, who the actor was, and — the layer no other tracker keeps — what the professional regulator did next. Every record links its primary source (judgment, order or regulator notice).
 
@@ -47,7 +47,7 @@ This is a mirror. The canonical, always-current version lives at **[safelegalai.
 
 | config | rows | what a row is | files |
 |---|---|---|---|
-| `incidents` | 170 | one row per court decision where AI misuse was found | [`data/incidents.jsonl`](data/incidents.jsonl) · [`csv/incidents.csv`](csv/incidents.csv) |
+| `incidents` | 173 | one row per court decision where AI misuse was found | [`data/incidents.jsonl`](data/incidents.jsonl) · [`csv/incidents.csv`](csv/incidents.csv) |
 
 ## Fields
 
@@ -87,15 +87,15 @@ ds = load_dataset("safelegalaidata/legal-ai-incidents")
 
 ## Cite
 
-> SafeLegalAI (published by SafeLegalAI), "Legal AI Incident Tracker", safelegalai.com, accessed 2026-10-05. https://safelegalai.com/tracker — data: CC BY 4.0.
+> SafeLegalAI (published by SafeLegalAI), "Legal AI Incident Tracker", safelegalai.com, accessed 2026-10-07. https://safelegalai.com/tracker — data: CC BY 4.0.
 
 ```bibtex
-@dataset{safelegalai_legal_ai_incidents_2026_10_05,
+@dataset{safelegalai_legal_ai_incidents_2026_10_07,
   title        = {Legal AI Incident Tracker},
   author       = {{SafeLegalAI (SafeLegalAI)}},
   year         = {2026},
   url          = {https://safelegalai.com/tracker},
-  note         = {Mirror: https://huggingface.co/datasets/safelegalaidata/legal-ai-incidents. Data CC BY 4.0. Last checked 2026-10-05.}
+  note         = {Mirror: https://huggingface.co/datasets/safelegalaidata/legal-ai-incidents. Data CC BY 4.0. Last checked 2026-10-07.}
 }
 ```
 
@@ -127,12 +127,12 @@ Cite the primary source as the authority and this dataset as the structured reco
   "publisher": "SafeLegalAI",
   "license": "CC BY 4.0",
   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
-  "lastChecked": "2026-10-05",
-  "synced": "2026-10-05",
+  "lastChecked": "2026-10-07",
+  "synced": "2026-10-07",
   "notice": "Provided as is, without warranty; not legal advice. SafeLegalAI records findings made by courts, regulators and vendors' own pages; the linked official documents are the record. Names and marks belong to their owners. Terms: https://safelegalai.com/disclaimer",
   "tables": {
-    "incidents": 170
+    "incidents": 173
   },
-  "contentSha256": "3e633d79a77f71e437ab6efad9fdc30318e26ac16e5ede9852c4403124c75531"
+  "contentSha256": "310cd433f314092b203d435799e635063feb9088b8a8c132866ef0ae4cce34b7"
 }
 ```
